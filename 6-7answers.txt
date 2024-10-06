@@ -1,0 +1,18 @@
+
+6. Explain the Purpose of express.Router() in the Code Above.
+
+Why is express.Router() used in Express.js applications, and how does it benefit the code structure?
+
+Ans: express.Router() is used to organize routes in Express. It allows one to group route handlers together and keep the application modular by separating concerns.
+
+7. Error Handling in Express.js
+
+How would you implement error handling in the Express routes to ensure that any issues (such as file not found or server errors) are appropriately handled? Provide an example.
+
+Ans: in Express, error handling is implemented using middleware. You can define a function that takes four parameters (err, req, res, next) and handle errors with them.
+
+for example: 
+app.use((err, req, res, next) => {
+  res.status(500).json({message: 'Something broke!'});
+});
+
